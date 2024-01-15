@@ -1,0 +1,22 @@
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize !important;
+    transition: all .2s linear;
+  }
+
+
+  body {
+    font-family: "Ubuntu", sans-serif !important;
+    font-size: 0.938rem;
+    background-color: #eee;
+  }
+
+  .titlee{
+    color: rgb(255, 0, 170);
+  }
