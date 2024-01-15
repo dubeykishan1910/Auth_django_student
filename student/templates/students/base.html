@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Management system</title>
+    <title>{% block title %}Student Management system{% endblock %}</title>
 
     <!-- Font awesome cdn  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  />
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     
+    {% block style %}{% endblock %}
 </head>
 <body class="d-flex flex-column min-vh-100">
     
@@ -34,12 +35,20 @@
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'add' %}"><i class="fa-solid fa-plus fa-lg"></i>  Add Student</a>
               </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'post_job' %}"><i class="fas fa-plus-circle fa-lg"></i> New Job Post</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'hr_dash' %}"><i class="fa-solid fa-user fa-lg"></i>  profile</a>
+              </li>
              
           </div>
         </div>
       </nav>
 
-      <div class="container-fluid">
+      <div class="container">
         {% block body %}
         {% endblock %}
       </div>

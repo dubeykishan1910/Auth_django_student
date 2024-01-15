@@ -1,0 +1,59 @@
+{% extends "students/base.html" %}
+
+{% block title %} Registration Form {% endblock %}
+
+{% block style %}
+<style>
+    
+</style>
+{% endblock %}
+
+
+{% block body %}
+
+
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="text-center mb-4">Sign Up</h2>
+          <form action="" method="post">
+              {% csrf_token %}
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" class="form-control" name="username" id="username" placeholder="Enter your username" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="confirmPassword" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" name="cpassword" id="confirmPassword" placeholder="Confirm your password" required>
+            </div>
+            {% if msg %}
+             <p style="color:red;">{{msg}}</p>
+            {% endif %}
+
+            <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+          </form>
+
+          <div class="text-center mt-3">
+            <p>Already have an account? <a href="">Log in</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+{% endblock %}

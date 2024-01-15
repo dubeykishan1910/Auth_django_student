@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'student',
+    'authuser_app',
+    'candidate_app',
+    'hr_app',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +130,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # STATICFILES_DIRS = [
 #     BASE_DIR / "static"
 # ]
+
+
+
+import os
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
